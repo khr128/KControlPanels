@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AED0D4281836E6BE001AAC6D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED0D4271836E6BE001AAC6D /* Cocoa.framework */; };
+		AED0D4321836E6BE001AAC6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AED0D4301836E6BE001AAC6D /* InfoPlist.strings */; };
+		AED0D43D1836E6BE001AAC6D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED0D43C1836E6BE001AAC6D /* XCTest.framework */; };
+		AED0D43E1836E6BE001AAC6D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED0D4271836E6BE001AAC6D /* Cocoa.framework */; };
+		AED0D4411836E6BE001AAC6D /* KControlPanels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED0D4241836E6BE001AAC6D /* KControlPanels.framework */; };
+		AED0D4471836E6BE001AAC6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AED0D4451836E6BE001AAC6D /* InfoPlist.strings */; };
+		AED0D4491836E6BE001AAC6D /* KCameraUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D4481836E6BE001AAC6D /* KCameraUITests.m */; };
+		AED0D4541836E724001AAC6D /* KCameraUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AED0D4521836E724001AAC6D /* KCameraUI.xcdatamodeld */; };
+		AED0D45A1836EA38001AAC6D /* KCameraUISphericalCoordsUIController.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D4581836EA38001AAC6D /* KCameraUISphericalCoordsUIController.h */; };
+		AED0D45B1836EA38001AAC6D /* KCameraUISphericalCoordsUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D4591836EA38001AAC6D /* KCameraUISphericalCoordsUIController.m */; };
+		AED0D45E1836EE5B001AAC6D /* KCameraUIController.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D45C1836EE5B001AAC6D /* KCameraUIController.h */; };
+		AED0D45F1836EE5B001AAC6D /* KCameraUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D45D1836EE5B001AAC6D /* KCameraUIController.m */; };
+		AED0D4621836EECC001AAC6D /* Camera.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D4601836EECC001AAC6D /* Camera.h */; };
+		AED0D4631836EECC001AAC6D /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D4611836EECC001AAC6D /* Camera.m */; };
+		AED0D4661836EECC001AAC6D /* Point3d.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D4641836EECC001AAC6D /* Point3d.h */; };
+		AED0D4671836EECC001AAC6D /* Point3d.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D4651836EECC001AAC6D /* Point3d.m */; };
+		AED0D46A1836F123001AAC6D /* KCameraUIControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED0D4691836F123001AAC6D /* KCameraUIControlPanel.xib */; };
+		AED0D4741836FD46001AAC6D /* KControlKeyPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D4721836FD46001AAC6D /* KControlKeyPanel.h */; };
+		AED0D4751836FD46001AAC6D /* KControlKeyPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D4731836FD46001AAC6D /* KControlKeyPanel.m */; };
+		AED0D4781836FE00001AAC6D /* KControlPanelsWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D4761836FE00001AAC6D /* KControlPanelsWindowController.h */; };
+		AED0D4791836FE00001AAC6D /* KControlPanelsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D4771836FE00001AAC6D /* KControlPanelsWindowController.m */; };
+		AED0D47E1836FFEE001AAC6D /* KControlPanelsMediatorBase.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D47C1836FFEE001AAC6D /* KControlPanelsMediatorBase.h */; };
+		AED0D47F1836FFEE001AAC6D /* KControlPanelsMediatorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D47D1836FFEE001AAC6D /* KControlPanelsMediatorBase.m */; };
+		AED0D483183703C2001AAC6D /* NSView+TopmostView.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D481183703C2001AAC6D /* NSView+TopmostView.h */; };
+		AED0D484183703C2001AAC6D /* NSView+TopmostView.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D482183703C2001AAC6D /* NSView+TopmostView.m */; };
+		AED0D4861837043C001AAC6D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED0D4851837043C001AAC6D /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AED0D43F1836E6BE001AAC6D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AED0D41B1836E6BE001AAC6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AED0D4231836E6BE001AAC6D;
+			remoteInfo = KCameraUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AED0D4241836E6BE001AAC6D /* KControlPanels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KControlPanels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AED0D4271836E6BE001AAC6D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		AED0D42A1836E6BE001AAC6D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AED0D42B1836E6BE001AAC6D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		AED0D42C1836E6BE001AAC6D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		AED0D42F1836E6BE001AAC6D /* KControlPanels-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KControlPanels-Info.plist"; sourceTree = "<group>"; };
+		AED0D4311836E6BE001AAC6D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AED0D4331836E6BE001AAC6D /* KControlPanels-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KControlPanels-Prefix.pch"; sourceTree = "<group>"; };
+		AED0D43B1836E6BE001AAC6D /* KControlPanelsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KControlPanelsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AED0D43C1836E6BE001AAC6D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AED0D4441836E6BE001AAC6D /* KControlPanelsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KControlPanelsTests-Info.plist"; sourceTree = "<group>"; };
+		AED0D4461836E6BE001AAC6D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AED0D4481836E6BE001AAC6D /* KCameraUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KCameraUITests.m; sourceTree = "<group>"; };
+		AED0D4531836E724001AAC6D /* KCameraUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KCameraUI.xcdatamodel; sourceTree = "<group>"; };
+		AED0D4561836E94A001AAC6D /* KCameraUISphericalTransforms.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KCameraUISphericalTransforms.h; sourceTree = "<group>"; };
+		AED0D4581836EA38001AAC6D /* KCameraUISphericalCoordsUIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCameraUISphericalCoordsUIController.h; sourceTree = "<group>"; };
+		AED0D4591836EA38001AAC6D /* KCameraUISphericalCoordsUIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCameraUISphericalCoordsUIController.m; sourceTree = "<group>"; };
+		AED0D45C1836EE5B001AAC6D /* KCameraUIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCameraUIController.h; sourceTree = "<group>"; };
+		AED0D45D1836EE5B001AAC6D /* KCameraUIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCameraUIController.m; sourceTree = "<group>"; };
+		AED0D4601836EECC001AAC6D /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		AED0D4611836EECC001AAC6D /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Camera.m; sourceTree = "<group>"; };
+		AED0D4641836EECC001AAC6D /* Point3d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Point3d.h; sourceTree = "<group>"; };
+		AED0D4651836EECC001AAC6D /* Point3d.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Point3d.m; sourceTree = "<group>"; };
+		AED0D4691836F123001AAC6D /* KCameraUIControlPanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KCameraUIControlPanel.xib; sourceTree = "<group>"; };
+		AED0D4721836FD46001AAC6D /* KControlKeyPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KControlKeyPanel.h; sourceTree = "<group>"; };
+		AED0D4731836FD46001AAC6D /* KControlKeyPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KControlKeyPanel.m; sourceTree = "<group>"; };
+		AED0D4761836FE00001AAC6D /* KControlPanelsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KControlPanelsWindowController.h; sourceTree = "<group>"; };
+		AED0D4771836FE00001AAC6D /* KControlPanelsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KControlPanelsWindowController.m; sourceTree = "<group>"; };
+		AED0D47B1836FEB2001AAC6D /* KControlPanelsMediator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KControlPanelsMediator.h; sourceTree = "<group>"; };
+		AED0D47C1836FFEE001AAC6D /* KControlPanelsMediatorBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KControlPanelsMediatorBase.h; sourceTree = "<group>"; };
+		AED0D47D1836FFEE001AAC6D /* KControlPanelsMediatorBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KControlPanelsMediatorBase.m; sourceTree = "<group>"; };
+		AED0D481183703C2001AAC6D /* NSView+TopmostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+TopmostView.h"; sourceTree = "<group>"; };
+		AED0D482183703C2001AAC6D /* NSView+TopmostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+TopmostView.m"; sourceTree = "<group>"; };
+		AED0D4851837043C001AAC6D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AED0D4201836E6BE001AAC6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED0D4861837043C001AAC6D /* QuartzCore.framework in Frameworks */,
+				AED0D4281836E6BE001AAC6D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED0D4381836E6BE001AAC6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED0D4411836E6BE001AAC6D /* KControlPanels.framework in Frameworks */,
+				AED0D43E1836E6BE001AAC6D /* Cocoa.framework in Frameworks */,
+				AED0D43D1836E6BE001AAC6D /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AED0D41A1836E6BE001AAC6D = {
+			isa = PBXGroup;
+			children = (
+				AED0D48018370385001AAC6D /* Categories */,
+				AED0D4711836FCC1001AAC6D /* Mediators */,
+				AED0D4701836FCB3001AAC6D /* Controllers */,
+				AED0D46F1836FC9B001AAC6D /* Panels */,
+				AED0D42D1836E6BE001AAC6D /* KCameraUI */,
+				AED0D4421836E6BE001AAC6D /* KCameraUITests */,
+				AED0D4261836E6BE001AAC6D /* Frameworks */,
+				AED0D4251836E6BE001AAC6D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AED0D4251836E6BE001AAC6D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AED0D4241836E6BE001AAC6D /* KControlPanels.framework */,
+				AED0D43B1836E6BE001AAC6D /* KControlPanelsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AED0D4261836E6BE001AAC6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AED0D4851837043C001AAC6D /* QuartzCore.framework */,
+				AED0D4271836E6BE001AAC6D /* Cocoa.framework */,
+				AED0D43C1836E6BE001AAC6D /* XCTest.framework */,
+				AED0D4291836E6BE001AAC6D /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AED0D4291836E6BE001AAC6D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AED0D42A1836E6BE001AAC6D /* Foundation.framework */,
+				AED0D42B1836E6BE001AAC6D /* CoreData.framework */,
+				AED0D42C1836E6BE001AAC6D /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		AED0D42D1836E6BE001AAC6D /* KCameraUI */ = {
+			isa = PBXGroup;
+			children = (
+				AED0D4681836F0B1001AAC6D /* Xibs */,
+				AED0D4571836E992001AAC6D /* Controllers */,
+				AED0D4551836E8EB001AAC6D /* Protocols */,
+				AED0D42E1836E6BE001AAC6D /* Supporting Files */,
+				AED0D4521836E724001AAC6D /* KCameraUI.xcdatamodeld */,
+				AED0D4641836EECC001AAC6D /* Point3d.h */,
+				AED0D4651836EECC001AAC6D /* Point3d.m */,
+				AED0D4601836EECC001AAC6D /* Camera.h */,
+				AED0D4611836EECC001AAC6D /* Camera.m */,
+			);
+			path = KCameraUI;
+			sourceTree = "<group>";
+		};
+		AED0D42E1836E6BE001AAC6D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AED0D42F1836E6BE001AAC6D /* KControlPanels-Info.plist */,
+				AED0D4301836E6BE001AAC6D /* InfoPlist.strings */,
+				AED0D4331836E6BE001AAC6D /* KControlPanels-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AED0D4421836E6BE001AAC6D /* KCameraUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AED0D4481836E6BE001AAC6D /* KCameraUITests.m */,
+				AED0D4431836E6BE001AAC6D /* Supporting Files */,
+			);
+			path = KCameraUITests;
+			sourceTree = "<group>";
+		};
+		AED0D4431836E6BE001AAC6D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AED0D4441836E6BE001AAC6D /* KControlPanelsTests-Info.plist */,
+				AED0D4451836E6BE001AAC6D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AED0D4551836E8EB001AAC6D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AED0D4561836E94A001AAC6D /* KCameraUISphericalTransforms.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		AED0D4571836E992001AAC6D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AED0D4581836EA38001AAC6D /* KCameraUISphericalCoordsUIController.h */,
+				AED0D4591836EA38001AAC6D /* KCameraUISphericalCoordsUIController.m */,
+				AED0D45C1836EE5B001AAC6D /* KCameraUIController.h */,
+				AED0D45D1836EE5B001AAC6D /* KCameraUIController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		AED0D4681836F0B1001AAC6D /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				AED0D4691836F123001AAC6D /* KCameraUIControlPanel.xib */,
+			);
+			name = Xibs;
+			sourceTree = "<group>";
+		};
+		AED0D46F1836FC9B001AAC6D /* Panels */ = {
+			isa = PBXGroup;
+			children = (
+				AED0D4721836FD46001AAC6D /* KControlKeyPanel.h */,
+				AED0D4731836FD46001AAC6D /* KControlKeyPanel.m */,
+			);
+			name = Panels;
+			sourceTree = "<group>";
+		};
+		AED0D4701836FCB3001AAC6D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AED0D4761836FE00001AAC6D /* KControlPanelsWindowController.h */,
+				AED0D4771836FE00001AAC6D /* KControlPanelsWindowController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		AED0D4711836FCC1001AAC6D /* Mediators */ = {
+			isa = PBXGroup;
+			children = (
+				AED0D47A1836FE6C001AAC6D /* Protocols */,
+				AED0D47C1836FFEE001AAC6D /* KControlPanelsMediatorBase.h */,
+				AED0D47D1836FFEE001AAC6D /* KControlPanelsMediatorBase.m */,
+			);
+			name = Mediators;
+			sourceTree = "<group>";
+		};
+		AED0D47A1836FE6C001AAC6D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AED0D47B1836FEB2001AAC6D /* KControlPanelsMediator.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		AED0D48018370385001AAC6D /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				AED0D481183703C2001AAC6D /* NSView+TopmostView.h */,
+				AED0D482183703C2001AAC6D /* NSView+TopmostView.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AED0D4211836E6BE001AAC6D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED0D4661836EECC001AAC6D /* Point3d.h in Headers */,
+				AED0D47E1836FFEE001AAC6D /* KControlPanelsMediatorBase.h in Headers */,
+				AED0D483183703C2001AAC6D /* NSView+TopmostView.h in Headers */,
+				AED0D4741836FD46001AAC6D /* KControlKeyPanel.h in Headers */,
+				AED0D4781836FE00001AAC6D /* KControlPanelsWindowController.h in Headers */,
+				AED0D4621836EECC001AAC6D /* Camera.h in Headers */,
+				AED0D45A1836EA38001AAC6D /* KCameraUISphericalCoordsUIController.h in Headers */,
+				AED0D45E1836EE5B001AAC6D /* KCameraUIController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		AED0D4231836E6BE001AAC6D /* KControlPanels */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AED0D44C1836E6BE001AAC6D /* Build configuration list for PBXNativeTarget "KControlPanels" */;
+			buildPhases = (
+				AED0D41F1836E6BE001AAC6D /* Sources */,
+				AED0D4201836E6BE001AAC6D /* Frameworks */,
+				AED0D4211836E6BE001AAC6D /* Headers */,
+				AED0D4221836E6BE001AAC6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KControlPanels;
+			productName = KCameraUI;
+			productReference = AED0D4241836E6BE001AAC6D /* KControlPanels.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AED0D43A1836E6BE001AAC6D /* KControlPanelsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AED0D44F1836E6BE001AAC6D /* Build configuration list for PBXNativeTarget "KControlPanelsTests" */;
+			buildPhases = (
+				AED0D4371836E6BE001AAC6D /* Sources */,
+				AED0D4381836E6BE001AAC6D /* Frameworks */,
+				AED0D4391836E6BE001AAC6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AED0D4401836E6BE001AAC6D /* PBXTargetDependency */,
+			);
+			name = KControlPanelsTests;
+			productName = KCameraUITests;
+			productReference = AED0D43B1836E6BE001AAC6D /* KControlPanelsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AED0D41B1836E6BE001AAC6D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = khr;
+				TargetAttributes = {
+					AED0D43A1836E6BE001AAC6D = {
+						TestTargetID = AED0D4231836E6BE001AAC6D;
+					};
+				};
+			};
+			buildConfigurationList = AED0D41E1836E6BE001AAC6D /* Build configuration list for PBXProject "KControlPanels" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AED0D41A1836E6BE001AAC6D;
+			productRefGroup = AED0D4251836E6BE001AAC6D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AED0D4231836E6BE001AAC6D /* KControlPanels */,
+				AED0D43A1836E6BE001AAC6D /* KControlPanelsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AED0D4221836E6BE001AAC6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED0D4321836E6BE001AAC6D /* InfoPlist.strings in Resources */,
+				AED0D46A1836F123001AAC6D /* KCameraUIControlPanel.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED0D4391836E6BE001AAC6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED0D4471836E6BE001AAC6D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AED0D41F1836E6BE001AAC6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED0D4631836EECC001AAC6D /* Camera.m in Sources */,
+				AED0D45B1836EA38001AAC6D /* KCameraUISphericalCoordsUIController.m in Sources */,
+				AED0D4791836FE00001AAC6D /* KControlPanelsWindowController.m in Sources */,
+				AED0D4541836E724001AAC6D /* KCameraUI.xcdatamodeld in Sources */,
+				AED0D45F1836EE5B001AAC6D /* KCameraUIController.m in Sources */,
+				AED0D484183703C2001AAC6D /* NSView+TopmostView.m in Sources */,
+				AED0D4751836FD46001AAC6D /* KControlKeyPanel.m in Sources */,
+				AED0D47F1836FFEE001AAC6D /* KControlPanelsMediatorBase.m in Sources */,
+				AED0D4671836EECC001AAC6D /* Point3d.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AED0D4371836E6BE001AAC6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AED0D4491836E6BE001AAC6D /* KCameraUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AED0D4401836E6BE001AAC6D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AED0D4231836E6BE001AAC6D /* KControlPanels */;
+			targetProxy = AED0D43F1836E6BE001AAC6D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AED0D4301836E6BE001AAC6D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AED0D4311836E6BE001AAC6D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AED0D4451836E6BE001AAC6D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AED0D4461836E6BE001AAC6D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AED0D44A1836E6BE001AAC6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		AED0D44B1836E6BE001AAC6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		AED0D44D1836E6BE001AAC6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KCameraUI/KControlPanels-Prefix.pch";
+				INFOPLIST_FILE = "KCameraUI/KControlPanels-Info.plist";
+				PRODUCT_NAME = KControlPanels;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		AED0D44E1836E6BE001AAC6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KCameraUI/KControlPanels-Prefix.pch";
+				INFOPLIST_FILE = "KCameraUI/KControlPanels-Info.plist";
+				PRODUCT_NAME = KControlPanels;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		AED0D4501836E6BE001AAC6D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KCameraUI.framework/Versions/A/KCameraUI";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KCameraUI/KCameraUI-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KCameraUITests/KControlPanelsTests-Info.plist";
+				PRODUCT_NAME = KControlPanelsTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		AED0D4511836E6BE001AAC6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KCameraUI.framework/Versions/A/KCameraUI";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KCameraUI/KCameraUI-Prefix.pch";
+				INFOPLIST_FILE = "KCameraUITests/KControlPanelsTests-Info.plist";
+				PRODUCT_NAME = KControlPanelsTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AED0D41E1836E6BE001AAC6D /* Build configuration list for PBXProject "KControlPanels" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED0D44A1836E6BE001AAC6D /* Debug */,
+				AED0D44B1836E6BE001AAC6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AED0D44C1836E6BE001AAC6D /* Build configuration list for PBXNativeTarget "KControlPanels" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED0D44D1836E6BE001AAC6D /* Debug */,
+				AED0D44E1836E6BE001AAC6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		AED0D44F1836E6BE001AAC6D /* Build configuration list for PBXNativeTarget "KControlPanelsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AED0D4501836E6BE001AAC6D /* Debug */,
+				AED0D4511836E6BE001AAC6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AED0D4521836E724001AAC6D /* KCameraUI.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AED0D4531836E724001AAC6D /* KCameraUI.xcdatamodel */,
+			);
+			currentVersion = AED0D4531836E724001AAC6D /* KCameraUI.xcdatamodel */;
+			path = KCameraUI.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AED0D41B1836E6BE001AAC6D /* Project object */;
+}

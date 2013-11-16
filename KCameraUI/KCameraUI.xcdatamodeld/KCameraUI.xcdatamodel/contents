@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13A603" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Camera" representedClassName="Camera" syncable="YES">
+        <attribute name="angle" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="farZ" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="nearZ" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Point3d" inverseName="camera.location" inverseEntity="Point3d" syncable="YES"/>
+        <relationship name="lookAt" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Point3d" inverseName="camera.lookAt" inverseEntity="Point3d" syncable="YES"/>
+        <relationship name="up" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Point3d" inverseName="camera.up" inverseEntity="Point3d" syncable="YES"/>
+    </entity>
+    <entity name="Point3d" representedClassName="Point3d" syncable="YES">
+        <attribute name="x" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="y" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="z" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="camera.location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Camera" inverseName="location" inverseEntity="Camera" syncable="YES"/>
+        <relationship name="camera.lookAt" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Camera" inverseName="lookAt" inverseEntity="Camera" syncable="YES"/>
+        <relationship name="camera.up" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Camera" inverseName="up" inverseEntity="Camera" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Point3d" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Camera" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>
