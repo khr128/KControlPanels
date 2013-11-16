@@ -4,7 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="KControlPanelsWindowController"/>
+        <customObject id="-2" userLabel="File's Owner" customClass="KControlPanelsWindowController">
+            <connections>
+                <outlet property="window" destination="1xY-fD-kmm" id="3Yw-gi-DLM"/>
+            </connections>
+        </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application"/>
         <objectController mode="entity" id="TSA-WM-jhd" customClass="KCameraUIController">
@@ -14,7 +18,7 @@
             </connections>
         </objectController>
         <userDefaultsController representsSharedInstance="YES" id="qsD-3U-q9k"/>
-        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1xY-fD-kmm" customClass="NSPanel">
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1xY-fD-kmm" customClass="KControlKeyPanel">
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="139" y="85" width="387" height="223"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
@@ -36,7 +40,7 @@
                                     <tabViewItems>
                                         <tabViewItem label="Location" identifier="1" id="5hP-pI-So0">
                                             <view key="view" ambiguous="YES" id="Rf8-oj-kr7">
-                                                <rect key="frame" x="10" y="33" width="315" height="137"/>
+                                                <rect key="frame" x="10" y="33" width="203" height="0.0"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </view>
                                         </tabViewItem>

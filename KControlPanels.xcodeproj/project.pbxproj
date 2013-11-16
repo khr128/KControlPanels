@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE490CAB1837EE4600E9F12D /* KControlPanelsMediator.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D47B1836FEB2001AAC6D /* KControlPanelsMediator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AED0D4281836E6BE001AAC6D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED0D4271836E6BE001AAC6D /* Cocoa.framework */; };
 		AED0D4321836E6BE001AAC6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AED0D4301836E6BE001AAC6D /* InfoPlist.strings */; };
 		AED0D43D1836E6BE001AAC6D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED0D43C1836E6BE001AAC6D /* XCTest.framework */; };
@@ -24,13 +25,13 @@
 		AED0D4661836EECC001AAC6D /* Point3d.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D4641836EECC001AAC6D /* Point3d.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AED0D4671836EECC001AAC6D /* Point3d.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D4651836EECC001AAC6D /* Point3d.m */; };
 		AED0D46A1836F123001AAC6D /* KCameraUIControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED0D4691836F123001AAC6D /* KCameraUIControlPanel.xib */; };
-		AED0D4741836FD46001AAC6D /* KControlKeyPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D4721836FD46001AAC6D /* KControlKeyPanel.h */; };
+		AED0D4741836FD46001AAC6D /* KControlKeyPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D4721836FD46001AAC6D /* KControlKeyPanel.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AED0D4751836FD46001AAC6D /* KControlKeyPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D4731836FD46001AAC6D /* KControlKeyPanel.m */; };
-		AED0D4781836FE00001AAC6D /* KControlPanelsWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D4761836FE00001AAC6D /* KControlPanelsWindowController.h */; };
+		AED0D4781836FE00001AAC6D /* KControlPanelsWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D4761836FE00001AAC6D /* KControlPanelsWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AED0D4791836FE00001AAC6D /* KControlPanelsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D4771836FE00001AAC6D /* KControlPanelsWindowController.m */; };
-		AED0D47E1836FFEE001AAC6D /* KControlPanelsMediatorBase.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D47C1836FFEE001AAC6D /* KControlPanelsMediatorBase.h */; };
+		AED0D47E1836FFEE001AAC6D /* KControlPanelsMediatorBase.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D47C1836FFEE001AAC6D /* KControlPanelsMediatorBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AED0D47F1836FFEE001AAC6D /* KControlPanelsMediatorBase.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D47D1836FFEE001AAC6D /* KControlPanelsMediatorBase.m */; };
-		AED0D483183703C2001AAC6D /* NSView+TopmostView.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D481183703C2001AAC6D /* NSView+TopmostView.h */; };
+		AED0D483183703C2001AAC6D /* NSView+TopmostView.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D481183703C2001AAC6D /* NSView+TopmostView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AED0D484183703C2001AAC6D /* NSView+TopmostView.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D482183703C2001AAC6D /* NSView+TopmostView.m */; };
 		AED0D4861837043C001AAC6D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED0D4851837043C001AAC6D /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -283,9 +284,10 @@
 				AED0D4661836EECC001AAC6D /* Point3d.h in Headers */,
 				AED0D4621836EECC001AAC6D /* Camera.h in Headers */,
 				AED0D47E1836FFEE001AAC6D /* KControlPanelsMediatorBase.h in Headers */,
-				AED0D483183703C2001AAC6D /* NSView+TopmostView.h in Headers */,
 				AED0D4741836FD46001AAC6D /* KControlKeyPanel.h in Headers */,
 				AED0D4781836FE00001AAC6D /* KControlPanelsWindowController.h in Headers */,
+				AED0D483183703C2001AAC6D /* NSView+TopmostView.h in Headers */,
+				AE490CAB1837EE4600E9F12D /* KControlPanelsMediator.h in Headers */,
 				AED0D45A1836EA38001AAC6D /* KCameraUISphericalCoordsUIController.h in Headers */,
 				AED0D45E1836EE5B001AAC6D /* KCameraUIController.h in Headers */,
 			);
