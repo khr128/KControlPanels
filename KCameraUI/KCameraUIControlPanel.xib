@@ -7,7 +7,69 @@
         <customObject id="-2" userLabel="File's Owner" customClass="KControlPanelsWindowController"/>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application"/>
-        <objectController mode="entity" id="TSA-WM-jhd" customClass="KCameraUIController"/>
+        <objectController mode="entity" id="TSA-WM-jhd" customClass="KCameraUIController">
+            <connections>
+                <binding destination="-2" name="contentObject" keyPath="objectController.content" id="3Vw-6F-ota"/>
+                <binding destination="-2" name="managedObjectContext" keyPath="objectController.managedObjectContext" id="Vri-5o-9Mw"/>
+            </connections>
+        </objectController>
         <userDefaultsController representsSharedInstance="YES" id="qsD-3U-q9k"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1xY-fD-kmm" customClass="NSPanel">
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="139" y="85" width="387" height="223"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
+            <view key="contentView" id="LsM-hM-KeK">
+                <rect key="frame" x="0.0" y="0.0" width="387" height="223"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <box autoresizesSubviews="NO" fixedFrame="YES" title="Camera" borderType="line" translatesAutoresizingMaskIntoConstraints="NO" id="Rfv-DR-LlZ">
+                        <rect key="frame" x="17" y="16" width="353" height="207"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <view key="contentView">
+                            <rect key="frame" x="1" y="1" width="351" height="191"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <tabView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9l4-ei-Jwi">
+                                    <rect key="frame" x="11" y="4" width="335" height="183"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <tabViewItems>
+                                        <tabViewItem label="Location" identifier="1" id="5hP-pI-So0">
+                                            <view key="view" ambiguous="YES" id="Rf8-oj-kr7">
+                                                <rect key="frame" x="10" y="33" width="315" height="137"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                        </tabViewItem>
+                                        <tabViewItem label="Look At" identifier="2" id="3zi-Ux-1ya">
+                                            <view key="view" id="bQh-f3-fbq">
+                                                <rect key="frame" x="10" y="33" width="315" height="137"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                        </tabViewItem>
+                                        <tabViewItem label="Frustum" identifier="3" id="ivJ-ak-Qpv">
+                                            <view key="view" id="i9y-gz-f6y">
+                                                <rect key="frame" x="10" y="33" width="315" height="137"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </view>
+                                        </tabViewItem>
+                                    </tabViewItems>
+                                </tabView>
+                            </subviews>
+                        </view>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </box>
+                </subviews>
+            </view>
+        </window>
+        <comboBox verticalHuggingPriority="750" id="kz8-cw-UmZ">
+            <rect key="frame" x="0.0" y="0.0" width="99" height="26"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="GwN-u2-Omm">
+                <font key="font" metaFont="system"/>
+                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+            </comboBoxCell>
+        </comboBox>
     </objects>
 </document>

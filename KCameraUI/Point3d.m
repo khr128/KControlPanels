@@ -16,4 +16,13 @@
 @dynamic y;
 @dynamic z;
 
++ (Point3d *)initWith:(NSManagedObjectContext *)moc x:(float)x y:(float)y z:(float)z {
+  Point3d *p = [NSEntityDescription insertNewObjectForEntityForName:@"Point3d" inManagedObjectContext:moc];
+  p.x = [NSNumber numberWithFloat:x];
+  p.y = [NSNumber numberWithFloat:y];
+  p.z = [NSNumber numberWithFloat:z];
+  
+  return p;
+}
+
 @end

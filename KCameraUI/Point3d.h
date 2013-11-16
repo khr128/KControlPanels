@@ -17,4 +17,6 @@
 @property (nonatomic, retain) NSNumber * y;
 @property (nonatomic, retain) NSNumber * z;
 
++ (Point3d *)initWith:(NSManagedObjectContext *)moc x:(float)x y:(float)y z:(float)z;
+
 @end

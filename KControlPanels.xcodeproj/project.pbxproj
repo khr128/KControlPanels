@@ -19,9 +19,9 @@
 		AED0D45B1836EA38001AAC6D /* KCameraUISphericalCoordsUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D4591836EA38001AAC6D /* KCameraUISphericalCoordsUIController.m */; };
 		AED0D45E1836EE5B001AAC6D /* KCameraUIController.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D45C1836EE5B001AAC6D /* KCameraUIController.h */; };
 		AED0D45F1836EE5B001AAC6D /* KCameraUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D45D1836EE5B001AAC6D /* KCameraUIController.m */; };
-		AED0D4621836EECC001AAC6D /* Camera.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D4601836EECC001AAC6D /* Camera.h */; };
+		AED0D4621836EECC001AAC6D /* Camera.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D4601836EECC001AAC6D /* Camera.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AED0D4631836EECC001AAC6D /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D4611836EECC001AAC6D /* Camera.m */; };
-		AED0D4661836EECC001AAC6D /* Point3d.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D4641836EECC001AAC6D /* Point3d.h */; };
+		AED0D4661836EECC001AAC6D /* Point3d.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D4641836EECC001AAC6D /* Point3d.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AED0D4671836EECC001AAC6D /* Point3d.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D4651836EECC001AAC6D /* Point3d.m */; };
 		AED0D46A1836F123001AAC6D /* KCameraUIControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = AED0D4691836F123001AAC6D /* KCameraUIControlPanel.xib */; };
 		AED0D4741836FD46001AAC6D /* KControlKeyPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D4721836FD46001AAC6D /* KControlKeyPanel.h */; };
@@ -105,6 +105,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE490CA81837BB5F00E9F12D /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				AED0D4521836E724001AAC6D /* KCameraUI.xcdatamodeld */,
+				AED0D4641836EECC001AAC6D /* Point3d.h */,
+				AED0D4651836EECC001AAC6D /* Point3d.m */,
+				AED0D4601836EECC001AAC6D /* Camera.h */,
+				AED0D4611836EECC001AAC6D /* Camera.m */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
 		AED0D41A1836E6BE001AAC6D = {
 			isa = PBXGroup;
 			children = (
@@ -152,15 +164,11 @@
 		AED0D42D1836E6BE001AAC6D /* KCameraUI */ = {
 			isa = PBXGroup;
 			children = (
+				AE490CA81837BB5F00E9F12D /* Core Data */,
 				AED0D4681836F0B1001AAC6D /* Xibs */,
 				AED0D4571836E992001AAC6D /* Controllers */,
 				AED0D4551836E8EB001AAC6D /* Protocols */,
 				AED0D42E1836E6BE001AAC6D /* Supporting Files */,
-				AED0D4521836E724001AAC6D /* KCameraUI.xcdatamodeld */,
-				AED0D4641836EECC001AAC6D /* Point3d.h */,
-				AED0D4651836EECC001AAC6D /* Point3d.m */,
-				AED0D4601836EECC001AAC6D /* Camera.h */,
-				AED0D4611836EECC001AAC6D /* Camera.m */,
 			);
 			path = KCameraUI;
 			sourceTree = "<group>";
@@ -273,11 +281,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AED0D4661836EECC001AAC6D /* Point3d.h in Headers */,
+				AED0D4621836EECC001AAC6D /* Camera.h in Headers */,
 				AED0D47E1836FFEE001AAC6D /* KControlPanelsMediatorBase.h in Headers */,
 				AED0D483183703C2001AAC6D /* NSView+TopmostView.h in Headers */,
 				AED0D4741836FD46001AAC6D /* KControlKeyPanel.h in Headers */,
 				AED0D4781836FE00001AAC6D /* KControlPanelsWindowController.h in Headers */,
-				AED0D4621836EECC001AAC6D /* Camera.h in Headers */,
 				AED0D45A1836EA38001AAC6D /* KCameraUISphericalCoordsUIController.h in Headers */,
 				AED0D45E1836EE5B001AAC6D /* KCameraUIController.h in Headers */,
 			);
@@ -507,6 +515,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KCameraUI/KControlPanels-Prefix.pch";
 				INFOPLIST_FILE = "KCameraUI/KControlPanels-Info.plist";
+				INSTALL_PATH = "$(SOURCE_ROOT)/../Frameworks";
 				PRODUCT_NAME = KControlPanels;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -522,6 +531,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KCameraUI/KControlPanels-Prefix.pch";
 				INFOPLIST_FILE = "KCameraUI/KControlPanels-Info.plist";
+				INSTALL_PATH = "$(SOURCE_ROOT)/../Frameworks";
 				PRODUCT_NAME = KControlPanels;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -586,6 +596,7 @@
 				AED0D44E1836E6BE001AAC6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AED0D44F1836E6BE001AAC6D /* Build configuration list for PBXNativeTarget "KControlPanelsTests" */ = {
 			isa = XCConfigurationList;
@@ -594,6 +605,7 @@
 				AED0D4511836E6BE001AAC6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+extern NSString * const KCONTROLPANELS_CAMERA_CHANGED_NOTIFICATION;
+
 @class Point3d;
 
 @interface Camera : NSManagedObject
@@ -19,5 +21,7 @@
 @property (nonatomic, retain) Point3d *location;
 @property (nonatomic, retain) Point3d *lookAt;
 @property (nonatomic, retain) Point3d *up;
+
++ (Camera *)initWith:(NSManagedObjectContext *)moc location:(Point3d *)location lookAt:(Point3d *)lookAtPt;
 
 @end
