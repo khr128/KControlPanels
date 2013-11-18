@@ -34,6 +34,12 @@
 		AED0D483183703C2001AAC6D /* NSView+TopmostView.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D481183703C2001AAC6D /* NSView+TopmostView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AED0D484183703C2001AAC6D /* NSView+TopmostView.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D482183703C2001AAC6D /* NSView+TopmostView.m */; };
 		AED0D4861837043C001AAC6D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED0D4851837043C001AAC6D /* QuartzCore.framework */; };
+		AEF4DF4C1839C54C00A4B2DB /* KControlPanelsRadiansToDegreesTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF4DF4A1839C54C00A4B2DB /* KControlPanelsRadiansToDegreesTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF4DF4D1839C54C00A4B2DB /* KControlPanelsRadiansToDegreesTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF4DF4B1839C54C00A4B2DB /* KControlPanelsRadiansToDegreesTransformer.m */; };
+		AEF4DF541839CA7F00A4B2DB /* KControlPanelsRadiansToDegreeStringTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF4DF521839CA7F00A4B2DB /* KControlPanelsRadiansToDegreeStringTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF4DF551839CA7F00A4B2DB /* KControlPanelsRadiansToDegreeStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF4DF531839CA7F00A4B2DB /* KControlPanelsRadiansToDegreeStringTransformer.m */; };
+		AEF4DF581839CC3400A4B2DB /* KControlPanelsBaseAdjustedAngleTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF4DF561839CC3400A4B2DB /* KControlPanelsBaseAdjustedAngleTransformer.h */; };
+		AEF4DF591839CC3400A4B2DB /* KControlPanelsBaseAdjustedAngleTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AEF4DF571839CC3400A4B2DB /* KControlPanelsBaseAdjustedAngleTransformer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +87,12 @@
 		AED0D481183703C2001AAC6D /* NSView+TopmostView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+TopmostView.h"; sourceTree = "<group>"; };
 		AED0D482183703C2001AAC6D /* NSView+TopmostView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+TopmostView.m"; sourceTree = "<group>"; };
 		AED0D4851837043C001AAC6D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AEF4DF4A1839C54C00A4B2DB /* KControlPanelsRadiansToDegreesTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KControlPanelsRadiansToDegreesTransformer.h; sourceTree = "<group>"; };
+		AEF4DF4B1839C54C00A4B2DB /* KControlPanelsRadiansToDegreesTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KControlPanelsRadiansToDegreesTransformer.m; sourceTree = "<group>"; };
+		AEF4DF521839CA7F00A4B2DB /* KControlPanelsRadiansToDegreeStringTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KControlPanelsRadiansToDegreeStringTransformer.h; sourceTree = "<group>"; };
+		AEF4DF531839CA7F00A4B2DB /* KControlPanelsRadiansToDegreeStringTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KControlPanelsRadiansToDegreeStringTransformer.m; sourceTree = "<group>"; };
+		AEF4DF561839CC3400A4B2DB /* KControlPanelsBaseAdjustedAngleTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KControlPanelsBaseAdjustedAngleTransformer.h; sourceTree = "<group>"; };
+		AEF4DF571839CC3400A4B2DB /* KControlPanelsBaseAdjustedAngleTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KControlPanelsBaseAdjustedAngleTransformer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +133,7 @@
 		AED0D41A1836E6BE001AAC6D = {
 			isa = PBXGroup;
 			children = (
+				AEF4DF491839C4ED00A4B2DB /* Value Transformers */,
 				AED0D48018370385001AAC6D /* Categories */,
 				AED0D4711836FCC1001AAC6D /* Mediators */,
 				AED0D4701836FCB3001AAC6D /* Controllers */,
@@ -274,6 +287,19 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		AEF4DF491839C4ED00A4B2DB /* Value Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				AEF4DF4A1839C54C00A4B2DB /* KControlPanelsRadiansToDegreesTransformer.h */,
+				AEF4DF4B1839C54C00A4B2DB /* KControlPanelsRadiansToDegreesTransformer.m */,
+				AEF4DF521839CA7F00A4B2DB /* KControlPanelsRadiansToDegreeStringTransformer.h */,
+				AEF4DF531839CA7F00A4B2DB /* KControlPanelsRadiansToDegreeStringTransformer.m */,
+				AEF4DF561839CC3400A4B2DB /* KControlPanelsBaseAdjustedAngleTransformer.h */,
+				AEF4DF571839CC3400A4B2DB /* KControlPanelsBaseAdjustedAngleTransformer.m */,
+			);
+			name = "Value Transformers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -286,6 +312,9 @@
 				AED0D47E1836FFEE001AAC6D /* KControlPanelsMediatorBase.h in Headers */,
 				AED0D4741836FD46001AAC6D /* KControlKeyPanel.h in Headers */,
 				AED0D4781836FE00001AAC6D /* KControlPanelsWindowController.h in Headers */,
+				AEF4DF541839CA7F00A4B2DB /* KControlPanelsRadiansToDegreeStringTransformer.h in Headers */,
+				AEF4DF581839CC3400A4B2DB /* KControlPanelsBaseAdjustedAngleTransformer.h in Headers */,
+				AEF4DF4C1839C54C00A4B2DB /* KControlPanelsRadiansToDegreesTransformer.h in Headers */,
 				AED0D483183703C2001AAC6D /* NSView+TopmostView.h in Headers */,
 				AE490CAB1837EE4600E9F12D /* KControlPanelsMediator.h in Headers */,
 				AED0D45A1836EA38001AAC6D /* KCameraUISphericalCoordsUIController.h in Headers */,
@@ -395,6 +424,9 @@
 				AED0D4541836E724001AAC6D /* KCameraUI.xcdatamodeld in Sources */,
 				AED0D45F1836EE5B001AAC6D /* KCameraUIController.m in Sources */,
 				AED0D484183703C2001AAC6D /* NSView+TopmostView.m in Sources */,
+				AEF4DF4D1839C54C00A4B2DB /* KControlPanelsRadiansToDegreesTransformer.m in Sources */,
+				AEF4DF591839CC3400A4B2DB /* KControlPanelsBaseAdjustedAngleTransformer.m in Sources */,
+				AEF4DF551839CA7F00A4B2DB /* KControlPanelsRadiansToDegreeStringTransformer.m in Sources */,
 				AED0D4751836FD46001AAC6D /* KControlKeyPanel.m in Sources */,
 				AED0D47F1836FFEE001AAC6D /* KControlPanelsMediatorBase.m in Sources */,
 				AED0D4671836EECC001AAC6D /* Point3d.m in Sources */,

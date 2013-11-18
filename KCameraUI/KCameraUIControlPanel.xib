@@ -85,8 +85,8 @@
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="0.10000000000000001" maxValue="100" doubleValue="50" tickMarkPosition="below" numberOfTickMarks="8" sliderType="linear" id="Vqd-tY-by8"/>
                                                         <connections>
-                                                            <binding destination="TSA-WM-jhd" name="maxValue" keyPath="maxDistanceFromCenter" id="6rL-aj-0bc"/>
                                                             <binding destination="TSA-WM-jhd" name="value" keyPath="distanceFromCenter" previousBinding="6rL-aj-0bc" id="weX-aD-Ia6"/>
+                                                            <binding destination="TSA-WM-jhd" name="maxValue" keyPath="maxDistanceFromCenter" id="6rL-aj-0bc"/>
                                                         </connections>
                                                     </slider>
                                                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mtx-0l-EFb">
@@ -106,8 +106,8 @@
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
                                                         <connections>
-                                                            <binding destination="TSA-WM-jhd" name="maxValue" keyPath="maxDistanceFromCenter" id="IBf-t7-7B4"/>
                                                             <binding destination="TSA-WM-jhd" name="value" keyPath="distanceFromCenter" previousBinding="IBf-t7-7B4" id="PWu-zC-ggW"/>
+                                                            <binding destination="TSA-WM-jhd" name="maxValue" keyPath="maxDistanceFromCenter" id="IBf-t7-7B4"/>
                                                         </connections>
                                                     </textField>
                                                 </subviews>
@@ -135,14 +135,5 @@
                 </subviews>
             </view>
         </window>
-        <comboBox verticalHuggingPriority="750" id="kz8-cw-UmZ">
-            <rect key="frame" x="0.0" y="0.0" width="99" height="26"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-            <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="GwN-u2-Omm">
-                <font key="font" metaFont="system"/>
-                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-            </comboBoxCell>
-        </comboBox>
     </objects>
 </document>
