@@ -13,7 +13,6 @@
         <customObject id="-3" userLabel="Application"/>
         <objectController mode="entity" entityName="Camera" id="TSA-WM-jhd" customClass="KCameraUIController">
             <connections>
-                <binding destination="-2" name="contentObject" keyPath="objectController.content" id="ulu-nQ-PXi"/>
                 <binding destination="-2" name="managedObjectContext" keyPath="objectController.managedObjectContext" id="Vri-5o-9Mw"/>
             </connections>
         </objectController>
@@ -44,7 +43,7 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1HQ-Xe-2EG">
-                                                        <rect key="frame" x="223" y="112" width="32" height="17"/>
+                                                        <rect key="frame" x="221" y="112" width="27" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Max" id="ImD-Mg-0gv">
                                                             <font key="font" size="11" name="LucidaGrande"/>
@@ -53,9 +52,9 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="top-2C-SKI">
-                                                        <rect key="frame" x="252" y="112" width="40" height="22"/>
+                                                        <rect key="frame" x="249" y="112" width="43" height="19"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="MrV-y4-Aux">
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="1000" drawsBackground="YES" id="MrV-y4-Aux">
                                                             <numberFormatter key="formatter" formatterBehavior="custom10_4" positiveFormat="#,##0.#" negativeFormat="#,##0.#" numberStyle="decimal" usesGroupingSeparator="NO" minimumIntegerDigits="1" maximumIntegerDigits="309" minimumFractionDigits="0" maximumFractionDigits="1" id="kZ1-hh-v0P">
                                                                 <real key="roundingIncrement" value="0.0"/>
                                                                 <real key="minimum" value="1"/>
@@ -63,7 +62,7 @@
                                                                     <bool key="localizesFormat" value="YES"/>
                                                                 </metadata>
                                                             </numberFormatter>
-                                                            <font key="font" metaFont="system"/>
+                                                            <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -71,10 +70,85 @@
                                                             <binding destination="TSA-WM-jhd" name="value" keyPath="maxDistanceFromCenter" id="D8Y-L6-KYW"/>
                                                         </connections>
                                                     </textField>
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UlB-TT-DxE">
+                                                        <rect key="frame" x="249" y="82" width="43" height="19"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="179.5" drawsBackground="YES" id="gDI-bX-pT2">
+                                                            <numberFormatter key="formatter" formatterBehavior="custom10_4" positiveFormat="##0.#" negativeFormat="##0.#" numberStyle="decimal" usesGroupingSeparator="NO" minimumIntegerDigits="1" maximumIntegerDigits="309" minimumFractionDigits="0" maximumFractionDigits="1" id="gc3-JV-GsX">
+                                                                <real key="roundingIncrement" value="0.0"/>
+                                                                <real key="minimum" value="0.5"/>
+                                                                <real key="maximum" value="179.5"/>
+                                                                <metadata>
+                                                                    <bool key="localizesFormat" value="YES"/>
+                                                                </metadata>
+                                                            </numberFormatter>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="TSA-WM-jhd" name="value" keyPath="theta" id="Zi8-xz-gEE">
+                                                                <dictionary key="options">
+                                                                    <string key="NSValueTransformerName">KControlPanelsRadiansToDegreesTransformer</string>
+                                                                </dictionary>
+                                                            </binding>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zfN-O1-L0l">
+                                                        <rect key="frame" x="113" y="49" width="46" height="19"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="-179.5" drawsBackground="YES" id="s1w-UM-Nz9">
+                                                            <numberFormatter key="formatter" formatterBehavior="custom10_4" positiveFormat="##0.#" negativeFormat="##0.#" numberStyle="decimal" usesGroupingSeparator="NO" minimumIntegerDigits="1" maximumIntegerDigits="309" minimumFractionDigits="0" maximumFractionDigits="1" id="DlT-Yd-ZRh">
+                                                                <real key="roundingIncrement" value="0.0"/>
+                                                                <real key="minimum" value="-180"/>
+                                                                <real key="maximum" value="180"/>
+                                                                <metadata>
+                                                                    <bool key="localizesFormat" value="YES"/>
+                                                                </metadata>
+                                                            </numberFormatter>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="TSA-WM-jhd" name="value" keyPath="phi" id="0xk-Do-wZ3">
+                                                                <dictionary key="options">
+                                                                    <string key="NSValueTransformerName">KControlPanelsRadiansToDegreesTransformer</string>
+                                                                </dictionary>
+                                                            </binding>
+                                                        </connections>
+                                                    </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fzs-zC-mq9">
                                                         <rect key="frame" x="15" y="112" width="56" height="17"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Distance" id="u9a-9U-f50">
+                                                            <font key="font" size="11" name="LucidaGrande"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d8n-Hh-rh2">
+                                                        <rect key="frame" x="15" y="82" width="56" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Elevation" id="mEc-iz-Iq9">
+                                                            <font key="font" size="11" name="LucidaGrande"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zlv-Jl-eGB">
+                                                        <rect key="frame" x="15" y="50" width="56" height="17"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Azimuth" id="R0F-hZ-NzQ">
+                                                            <font key="font" size="11" name="LucidaGrande"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rGX-er-6PS">
+                                                        <rect key="frame" x="15" y="17" width="11" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="x" id="joo-xY-Tdx">
                                                             <font key="font" size="11" name="LucidaGrande"/>
                                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -89,8 +163,20 @@
                                                             <binding destination="TSA-WM-jhd" name="maxValue" keyPath="maxDistanceFromCenter" id="6rL-aj-0bc"/>
                                                         </connections>
                                                     </slider>
+                                                    <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F9N-hA-nXl">
+                                                        <rect key="frame" x="69" y="74" width="174" height="27"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="0.5" maxValue="179.5" doubleValue="50" tickMarkPosition="below" numberOfTickMarks="8" sliderType="linear" id="Mdc-e8-ZZU"/>
+                                                        <connections>
+                                                            <binding destination="TSA-WM-jhd" name="value" keyPath="theta" id="laV-DL-3A9">
+                                                                <dictionary key="options">
+                                                                    <string key="NSValueTransformerName">KControlPanelsRadiansToDegreesTransformer</string>
+                                                                </dictionary>
+                                                            </binding>
+                                                        </connections>
+                                                    </slider>
                                                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mtx-0l-EFb">
-                                                        <rect key="frame" x="171" y="112" width="47" height="22"/>
+                                                        <rect key="frame" x="171" y="112" width="47" height="19"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="f6k-IX-cLT">
                                                             <numberFormatter key="formatter" formatterBehavior="custom10_4" positiveFormat="#,##0.#" negativeFormat="#,##0.#" numberStyle="decimal" usesGroupingSeparator="NO" minimumIntegerDigits="1" maximumIntegerDigits="309" minimumFractionDigits="0" maximumFractionDigits="1" id="BPP-gy-6Ym">
@@ -101,7 +187,7 @@
                                                                     <bool key="localizesFormat" value="YES"/>
                                                                 </metadata>
                                                             </numberFormatter>
-                                                            <font key="font" metaFont="system"/>
+                                                            <font key="font" metaFont="smallSystem"/>
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
@@ -110,6 +196,92 @@
                                                             <binding destination="TSA-WM-jhd" name="maxValue" keyPath="maxDistanceFromCenter" id="IBf-t7-7B4"/>
                                                         </connections>
                                                     </textField>
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s7r-a6-5tv">
+                                                        <rect key="frame" x="29" y="15" width="47" height="19"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Med-E3-Ati">
+                                                            <numberFormatter key="formatter" formatterBehavior="custom10_4" positiveFormat="#,##0.##" negativeFormat="#,##0.##" numberStyle="decimal" generatesDecimalNumbers="YES" alwaysShowsDecimalSeparator="YES" minimumIntegerDigits="1" maximumIntegerDigits="309" minimumFractionDigits="0" maximumFractionDigits="2" id="3Q4-id-LGL">
+                                                                <real key="roundingIncrement" value="0.0"/>
+                                                                <real key="minimum" value="0.10000000000000001"/>
+                                                                <real key="maximum" value="100"/>
+                                                                <metadata>
+                                                                    <bool key="localizesFormat" value="YES"/>
+                                                                </metadata>
+                                                            </numberFormatter>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="TSA-WM-jhd" name="value" keyPath="selection.location.x" id="jJr-8W-Yd9"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iih-Tg-a2r">
+                                                        <rect key="frame" x="83" y="17" width="11" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="y" id="mVJ-nM-RfV">
+                                                            <font key="font" size="11" name="LucidaGrande"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qiQ-hU-jb1">
+                                                        <rect key="frame" x="97" y="15" width="47" height="19"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="v9U-d7-63q">
+                                                            <numberFormatter key="formatter" formatterBehavior="custom10_4" positiveFormat="#,##0.##" negativeFormat="#,##0.##" numberStyle="decimal" generatesDecimalNumbers="YES" alwaysShowsDecimalSeparator="YES" minimumIntegerDigits="1" maximumIntegerDigits="309" minimumFractionDigits="0" maximumFractionDigits="2" id="zUM-QQ-SXV">
+                                                                <real key="roundingIncrement" value="0.0"/>
+                                                                <metadata>
+                                                                    <bool key="localizesFormat" value="YES"/>
+                                                                </metadata>
+                                                            </numberFormatter>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="TSA-WM-jhd" name="value" keyPath="selection.location.y" id="7Rh-X4-L6S"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="txJ-r2-M5V">
+                                                        <rect key="frame" x="152" y="17" width="11" height="14"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="z" id="n1D-qt-OVN">
+                                                            <font key="font" size="11" name="LucidaGrande"/>
+                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fg6-PS-VaV">
+                                                        <rect key="frame" x="166" y="15" width="47" height="19"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="4iu-LR-Cn2">
+                                                            <numberFormatter key="formatter" formatterBehavior="custom10_4" positiveFormat="#,##0.##" negativeFormat="#,##0.##" numberStyle="decimal" generatesDecimalNumbers="YES" alwaysShowsDecimalSeparator="YES" minimumIntegerDigits="1" maximumIntegerDigits="309" minimumFractionDigits="0" maximumFractionDigits="2" id="iJV-Q2-d9z">
+                                                                <real key="roundingIncrement" value="0.0"/>
+                                                                <metadata>
+                                                                    <bool key="localizesFormat" value="YES"/>
+                                                                </metadata>
+                                                            </numberFormatter>
+                                                            <font key="font" metaFont="smallSystem"/>
+                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                        <connections>
+                                                            <binding destination="TSA-WM-jhd" name="value" keyPath="content.location.z" id="7vQ-eb-0B8"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <slider horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ADQ-dB-oBr">
+                                                        <rect key="frame" x="73" y="42" width="32" height="32"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                        <sliderCell key="cell" continuous="YES" alignment="left" minValue="-180" maxValue="180" tickMarkPosition="above" numberOfTickMarks="8" sliderType="circular" id="0ow-qV-bWP"/>
+                                                        <connections>
+                                                            <binding destination="TSA-WM-jhd" name="value" keyPath="phi" id="cme-py-Jh9">
+                                                                <dictionary key="options">
+                                                                    <string key="NSValueTransformerName">KControlPanelsRadiansToDegreesTransformer</string>
+                                                                </dictionary>
+                                                            </binding>
+                                                        </connections>
+                                                    </slider>
                                                 </subviews>
                                             </view>
                                         </tabViewItem>
