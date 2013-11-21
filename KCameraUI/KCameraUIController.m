@@ -12,11 +12,24 @@
 
 @implementation KCameraUIController
 
-- (void)awakeFromNib {
-  self.content = [Camera initWith:self.managedObjectContext
-                         location:[Point3d initWith:self.managedObjectContext x:0 y:2 z:-1]
-                           lookAt:[Point3d initWith:self.managedObjectContext x:0 y:0 z:0]];
+- (void)fetchOrCreateCamera {
+  NSFetchRequest *request = [[NSFetchRequest alloc] init];
+  [request setEntity:[NSEntityDescription entityForName:@"Camera" inManagedObjectContext:self.managedObjectContext]];
+  request.includesSubentities = YES;
+  NSError *error = nil;
+  NSArray *results = [self.managedObjectContext executeFetchRequest:request error:&error];
+  
+  if (results.count > 0) {
+    self.content = [results objectAtIndex:0];
+  } else {
+    self.content = [Camera initWith:self.managedObjectContext
+                           location:[Point3d initWith:self.managedObjectContext x:0 y:4 z:-4]
+                             lookAt:[Point3d initWith:self.managedObjectContext x:0 y:0 z:0]];
+  }
+}
 
+- (void)awakeFromNib {
+  [self fetchOrCreateCamera];
   [self updateLocationTransform];
   [self updateSphericalCoordinates];
   [self updateLocation];
