@@ -38,11 +38,22 @@
 }
 
 
-- (void)awakeFromNib {
-  self.content = [self fetchOrCreateCamera];
+- (void)updateTransforms {
   [self updateLocationTransform];
   [self updateSphericalCoordinates];
+}
+
+- (void)awakeFromNib {
+  self.content = [self fetchOrCreateCamera];
+  [self updateTransforms];
   [self updateLocation];
+  
+  NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+  [nc addObserver:self selector:@selector(handleCameraChange:) name:KCONTROLPANELS_CAMERA_CHANGED_NOTIFICATION object:nil];
+}
+
+- (void)handleCameraChange:(NSNotification *) note {
+  [self updateTransforms];
 }
 
 - (GLKVector3)location {
