@@ -33,14 +33,13 @@
   
   float R = GLKVector3Distance(c, l);
   currentDirection = GLKVector3Subtract(c, l);
-  GLKVector3 lmc = GLKVector3Negate(currentDirection);
   
   [self willChangeValueForKey:@"theta"];
-  _theta = [NSNumber numberWithFloat:acosf(GLKVector3DotProduct(lmc, u)/R)];
+  _theta = [NSNumber numberWithFloat:acosf(GLKVector3DotProduct(currentDirection, u)/R)];
   [self didChangeValueForKey:@"theta"];
   
   [self willChangeValueForKey:@"phi"];
-  _phi = [NSNumber numberWithFloat:atan2f(GLKVector3DotProduct(lmc, r), GLKVector3DotProduct(lmc, t))];
+  _phi = [NSNumber numberWithFloat:atan2f(GLKVector3DotProduct(currentDirection, r), GLKVector3DotProduct(currentDirection, t))];
   [self didChangeValueForKey:@"phi"];
   
   [self willChangeValueForKey:@"distanceFromCenter"];
@@ -57,9 +56,9 @@
   float tc = self.distanceFromCenter*sinf(th)*cosf(ph);
   float rc = self.distanceFromCenter*sinf(th)*sinf(ph);
   
-  GLKVector3 l = GLKVector3Add(self.center, GLKVector3MultiplyScalar(u, uc));
-  l = GLKVector3Add(l, GLKVector3MultiplyScalar(t, tc));
-  l = GLKVector3Add(l, GLKVector3MultiplyScalar(r, rc));
+  GLKVector3 l = GLKVector3Subtract(self.center, GLKVector3MultiplyScalar(u, uc));
+  l = GLKVector3Subtract(l, GLKVector3MultiplyScalar(t, tc));
+  l = GLKVector3Subtract(l, GLKVector3MultiplyScalar(r, rc));
   
   self.location = l;
   

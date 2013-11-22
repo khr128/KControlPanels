@@ -12,24 +12,34 @@
 
 @implementation KCameraUIController
 
-- (void)fetchOrCreateCamera {
+- (Camera *)fetchOrCreateCamera {
   NSFetchRequest *request = [[NSFetchRequest alloc] init];
   [request setEntity:[NSEntityDescription entityForName:@"Camera" inManagedObjectContext:self.managedObjectContext]];
   request.includesSubentities = YES;
   NSError *error = nil;
   NSArray *results = [self.managedObjectContext executeFetchRequest:request error:&error];
   
+  Camera *camera;
   if (results.count > 0) {
-    self.content = [results objectAtIndex:0];
+    camera = [results objectAtIndex:0];
   } else {
-    self.content = [Camera initWith:self.managedObjectContext
-                           location:[Point3d initWith:self.managedObjectContext x:0 y:4 z:-4]
-                             lookAt:[Point3d initWith:self.managedObjectContext x:0 y:0 z:0]];
+    camera = [NSEntityDescription insertNewObjectForEntityForName:@"Camera"
+                                           inManagedObjectContext:self.managedObjectContext];
+    camera.location = [Point3d initWith:self.managedObjectContext x:0 y:-5 z:-22.58];
+    camera.lookAt = [Point3d initWith:self.managedObjectContext x:0 y:-5 z:-3];
+    camera.up = [Point3d initWith:self.managedObjectContext x:0 y:1 z:0];
+    camera.nearZ = [NSNumber numberWithFloat:0.1];
+    camera.farZ = [NSNumber numberWithFloat:120.0];
+    camera.angle = [NSNumber numberWithFloat:50.0];
+    
+    [camera addObservers];
   }
+  return camera;
 }
 
+
 - (void)awakeFromNib {
-  [self fetchOrCreateCamera];
+  self.content = [self fetchOrCreateCamera];
   [self updateLocationTransform];
   [self updateSphericalCoordinates];
   [self updateLocation];
