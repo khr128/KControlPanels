@@ -10,6 +10,7 @@
 		AE4895EE183A5C2400C75939 /* KControlPanelAdjustedRadiansToDegreeStringTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = AE4895EC183A5C2400C75939 /* KControlPanelAdjustedRadiansToDegreeStringTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE4895EF183A5C2400C75939 /* KControlPanelAdjustedRadiansToDegreeStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4895ED183A5C2400C75939 /* KControlPanelAdjustedRadiansToDegreeStringTransformer.m */; };
 		AE490CAB1837EE4600E9F12D /* KControlPanelsMediator.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D47B1836FEB2001AAC6D /* KControlPanelsMediator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE9948DD18467FFA00621058 /* KCameraUI.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = AED0D4521836E724001AAC6D /* KCameraUI.xcdatamodeld */; };
 		AED0D4281836E6BE001AAC6D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED0D4271836E6BE001AAC6D /* Cocoa.framework */; };
 		AED0D4321836E6BE001AAC6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AED0D4301836E6BE001AAC6D /* InfoPlist.strings */; };
 		AED0D43D1836E6BE001AAC6D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED0D43C1836E6BE001AAC6D /* XCTest.framework */; };
@@ -414,6 +415,7 @@
 			files = (
 				AED0D4321836E6BE001AAC6D /* InfoPlist.strings in Resources */,
 				AED0D46A1836F123001AAC6D /* KCameraUIControlPanel.xib in Resources */,
+				AE9948DD18467FFA00621058 /* KCameraUI.xcdatamodeld in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

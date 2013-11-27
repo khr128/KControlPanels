@@ -45,8 +45,10 @@
   [self willChangeValueForKey:@"distanceFromCenter"];
   _distanceFromCenter = R;
   [self didChangeValueForKey:@"distanceFromCenter"];
-  
-  self.maxDistanceFromCenter = 2*R;
+}
+
+- (void)updateMaxDistance {
+  self.maxDistanceFromCenter = 2*_distanceFromCenter;
 }
 
 - (void)updateLocation {

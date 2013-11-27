@@ -47,6 +47,7 @@
   self.content = [self fetchOrCreateCamera];
   [self updateTransforms];
   [self updateLocation];
+  [self updateMaxDistance];
   
   NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
   [nc addObserver:self selector:@selector(handleCameraChange:) name:KCONTROLPANELS_CAMERA_CHANGED_NOTIFICATION object:nil];

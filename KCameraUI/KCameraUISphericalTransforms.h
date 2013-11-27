@@ -22,6 +22,7 @@
 - (void)updateSphericalCoordinates;
 - (void)updateLocationTransform;
 - (void)updateLocation;
+- (void)updateMaxDistance;
 
 @optional
 
