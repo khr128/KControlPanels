@@ -10,7 +10,7 @@
 		AE4895EE183A5C2400C75939 /* KControlPanelAdjustedRadiansToDegreeStringTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = AE4895EC183A5C2400C75939 /* KControlPanelAdjustedRadiansToDegreeStringTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AE4895EF183A5C2400C75939 /* KControlPanelAdjustedRadiansToDegreeStringTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4895ED183A5C2400C75939 /* KControlPanelAdjustedRadiansToDegreeStringTransformer.m */; };
 		AE490CAB1837EE4600E9F12D /* KControlPanelsMediator.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D47B1836FEB2001AAC6D /* KControlPanelsMediator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE9948DD18467FFA00621058 /* KCameraUI.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = AED0D4521836E724001AAC6D /* KCameraUI.xcdatamodeld */; };
+		AE9948DE1846846200621058 /* KCameraUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AED0D4521836E724001AAC6D /* KCameraUI.xcdatamodeld */; };
 		AED0D4281836E6BE001AAC6D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED0D4271836E6BE001AAC6D /* Cocoa.framework */; };
 		AED0D4321836E6BE001AAC6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AED0D4301836E6BE001AAC6D /* InfoPlist.strings */; };
 		AED0D43D1836E6BE001AAC6D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED0D43C1836E6BE001AAC6D /* XCTest.framework */; };
@@ -18,7 +18,6 @@
 		AED0D4411836E6BE001AAC6D /* KControlPanels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED0D4241836E6BE001AAC6D /* KControlPanels.framework */; };
 		AED0D4471836E6BE001AAC6D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AED0D4451836E6BE001AAC6D /* InfoPlist.strings */; };
 		AED0D4491836E6BE001AAC6D /* KCameraUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D4481836E6BE001AAC6D /* KCameraUITests.m */; };
-		AED0D4541836E724001AAC6D /* KCameraUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AED0D4521836E724001AAC6D /* KCameraUI.xcdatamodeld */; };
 		AED0D45A1836EA38001AAC6D /* KCameraUISphericalCoordsUIController.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D4581836EA38001AAC6D /* KCameraUISphericalCoordsUIController.h */; };
 		AED0D45B1836EA38001AAC6D /* KCameraUISphericalCoordsUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = AED0D4591836EA38001AAC6D /* KCameraUISphericalCoordsUIController.m */; };
 		AED0D45E1836EE5B001AAC6D /* KCameraUIController.h in Headers */ = {isa = PBXBuildFile; fileRef = AED0D45C1836EE5B001AAC6D /* KCameraUIController.h */; };
@@ -415,7 +414,6 @@
 			files = (
 				AED0D4321836E6BE001AAC6D /* InfoPlist.strings in Resources */,
 				AED0D46A1836F123001AAC6D /* KCameraUIControlPanel.xib in Resources */,
-				AE9948DD18467FFA00621058 /* KCameraUI.xcdatamodeld in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,10 +432,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE9948DE1846846200621058 /* KCameraUI.xcdatamodeld in Sources */,
 				AED0D4631836EECC001AAC6D /* Camera.m in Sources */,
 				AED0D45B1836EA38001AAC6D /* KCameraUISphericalCoordsUIController.m in Sources */,
 				AED0D4791836FE00001AAC6D /* KControlPanelsWindowController.m in Sources */,
-				AED0D4541836E724001AAC6D /* KCameraUI.xcdatamodeld in Sources */,
 				AED0D45F1836EE5B001AAC6D /* KCameraUIController.m in Sources */,
 				AEF4DF5D183A595100A4B2DB /* KControlPanelsAdjustedRadiansToDegreesTransformer.m in Sources */,
 				AED0D484183703C2001AAC6D /* NSView+TopmostView.m in Sources */,
