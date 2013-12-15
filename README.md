@@ -57,6 +57,7 @@ Add NSPanel to it. Set class of the panel to KControlKeyPanel. Remove titlebar a
 If you build your application now, you should be able to click on the disclosure triangle for Your Control Panel and
 see an empty panel animating into view. Clicking the disclosure triangle again (or pressing Esc while the panel is in
 focus) should close your panel. You can add controls and hook up actions to your panel now.
+<img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/EmptyPanel.png">
 
 ### 3. Setting camera UI control panel
 
