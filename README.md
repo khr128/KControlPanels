@@ -45,3 +45,10 @@ Connect disclosure triangle actions to your mediator and point mediator object c
 object.
 <img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/MediatorConnections.png">
 
+Add new empty XIB file YourControlPanel.xib and add NSPanel to it. Set class of the panel to KControlKeyPanel. 
+Remove titlebar and make it a regular panel.
+<img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/PanelClass.png">
+<img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/PanelNoBar.png">
+!!! IMPORTANT !!! Don't forget to connect the panels window and controller to the XIB's file owner.
+<img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/PanelWindow.png">
+

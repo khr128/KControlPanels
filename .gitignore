@@ -1,2 +1,4 @@
 *.xcodeproj
-README.assets
+README.asset
+*.pkg
+build/
