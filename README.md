@@ -32,4 +32,4 @@ KCameraUIControlPanel.xib is provided by the KControlPanels.framework, but you h
 ### 2. Add your control panel XIB
 
 Add labels and disclosure triangles to your main XIB.
-<img src="https://raw.github.com/khr128/gh-pages/README/ControlPanelUI.png">
+<img src="https://raw.github.com/khr128/gh-pages/README.assets/ControlPanelUI.png">
