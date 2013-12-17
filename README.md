@@ -160,4 +160,48 @@ and use it in the implementation file
 
     @end
 
+### 4. Use Core Data with your panels
 
+Connect your main UI object controller to your document
+
+*KDemoDocument.h*
+
+    #import <Cocoa/Cocoa.h>
+    @interface KDemoDocument : NSPersistentDocument {
+      IBOutlet NSObjectController *objectController;
+    }
+    @end
+Make sure that this `objectController` is connected to the Object Controller object in your main UI XIB.
+<img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/ObjectControllerHookup.png">
+
+Fetch or create an entity when awaking from NIB. I assume that a DemoEntity has been added to your `xcdatamodeld` file.
+
+*KDemoDocument.m"*
+
+    (DemoEntity *)fetchOrCreateDemoEntity {
+      NSFetchRequest *request = [[NSFetchRequest alloc] init];
+      [request setEntity:[NSEntityDescription entityForName:@"DemoEntity" inManagedObjectContext:self.managedObjectContext]];
+      request.includesSubentities = YES;
+      NSError *error = nil;
+      NSArray *results = [self.managedObjectContext executeFetchRequest:request error:&error];
+      
+      DemoEntity *demoEntity;
+      if (results.count > 0) {
+        demoEntity = [results objectAtIndex:0];
+      } else {
+        demoEntity = [NSEntityDescription insertNewObjectForEntityForName:@"DemoEntity"
+                                               inManagedObjectContext:self.managedObjectContext];
+        demoEntity.demoValue = [NSNumber numberWithDouble:12.345];
+      }
+      return demoEntity;
+    }
+
+    - (void)windowControllerDidLoadNib:(NSWindowController *)aController
+    {
+      [super windowControllerDidLoadNib:aController];
+      objectController.content = [self fetchOrCreateDemoEntity];
+    }
+
+Add controls to your control panel XIB, and bind values of the slider and the text field to 
+`objectController.content.demoValue`.
+<img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/ControlDataBinding.png">
