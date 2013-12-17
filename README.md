@@ -65,7 +65,7 @@ Camera UI control panel provides controls for a generic 3D camera in OpenGL appl
 point and distance , elevation, and azimuth with respect to this point. You also can adjust camera's yaw and pitch angles
 and its rotation around the direction of view. There are controls for camera's field of view angle and culling planes too.
 
-To start using the camera UI control panel it is necessary to merge frameworks camera model into your apps managed 
+To start using the camera UI control panel it is necessary to merge frameworks camera model into your app's managed
 object model by
 overriding -(id)managedObjectModel() method in your document implementation class.
 
