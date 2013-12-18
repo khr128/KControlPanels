@@ -29,7 +29,7 @@ Mediator is a controller that provides actions for your control panel disclosure
 
 KCameraUIControlPanel.xib is provided by the KControlPanels.framework, but you have to create your own YourControlPanel.xib.
 
-### 2. Add your control panel XIB
+### <a name='your_panel'></a> 2. Add your control panel XIB
 
 Add labels and disclosure triangles to your main XIB.
 <img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/ControlPanelUI.png">
@@ -239,4 +239,9 @@ and attach your panel as a `parentPanel` of this new mediator.
 <img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/ParentPanel.png">
 Also attach File Owner outlet `nestedMediator` to the XIB objet representing the `KDemoNestedControlPanelMediator`
 <img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/NestedMediatorHookup.png">
+
+Now add YourFirstNestedControlPanel.xib and YourSecondNestedControlPanel.xib and set up empty panels as described 
+[above](#your_panel). When you build and run your app, you should be able to open nested panels.
+<img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/OpenNestedPanel.png">
+Notice that closing outer panel will close all open nested panels automagically.
 
