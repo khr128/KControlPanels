@@ -8,7 +8,7 @@ Mediator is a controller that provides actions for your control panel disclosure
 
 *KDemoControlPanelMediator.h*
 
-    #import <KControlPanels/KControlPanelsMediatorBase.h
+    #import <KControlPanels/KControlPanelsMediatorBase.h>
     @interface KDemoControlPanelMediator : KControlPanelsMediatorBase
     - (IBAction)showYourControlPanel:(id)sender;
     - (IBAction)showCameraControlPanel:(id)sender;
@@ -197,11 +197,46 @@ Fetch or create an entity when awaking from NIB. I assume that a DemoEntity has 
     }
 
     - (void)windowControllerDidLoadNib:(NSWindowController *)aController
-    {
-      [super windowControllerDidLoadNib:aController];
-      objectController.content = [self fetchOrCreateDemoEntity];
-    }
+      {
+        [super windowControllerDidLoadNib:aController];
+        objectController.content = [self fetchOrCreateDemoEntity];
+      }
 
 Add controls to your control panel XIB, and bind values of the slider and the text field to 
 `objectController.content.demoValue`.
 <img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/ControlDataBinding.png">
+
+### 5. Adding nested control panels
+
+Create a new Mediator class that will be controlling your nested panels.
+
+*KDemoNestedControlPanelMediator.h*
+
+    #import <KControlPanels/KControlPanelsMediatorBase.h>
+    @interface KDemoNestedControlPanelMediator : KControlPanelsMediatorBase
+    - (IBAction)showYourFirstNestedControlPanel:(id)sender;
+    - (IBAction)showYourSecondNestedControlPanel:(id)sender;
+    @end
+
+*KDemoNestedControlPanelMediator.m*
+
+    #import "KDemoNestedControlPanelMediator.h"
+    @implementation KDemoNestedControlPanelMediator
+    - (IBAction)showYourFirstNestedControlPanel:(id)sender {
+      [self showPanel:sender nibName:@"YourFirstNestedControlPanel" context:nil];
+    }
+
+    - (IBAction)showYourSecondNestedControlPanel:(id)sender {
+      [self showPanel:sender nibName:@"YourSecondNestedControlPanel" context:nil];
+    }
+    @end
+
+
+Assuming that you added your control panel as described above (YourControlPanel.xib), add
+Object to YourControPanel.xib and set its class to `KDemoNestedControlPanelMediator`
+<img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/NestedMediator.png">
+and attach your panel as a `parentPanel` of this new mediator.
+<img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/ParentPanel.png">
+Also attach File Owner outlet `nestedMediator` to the XIB objet representing the `KDemoNestedControlPanelMediator`
+<img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/NestedMediatorHookup.png">
+
