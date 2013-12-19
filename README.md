@@ -245,3 +245,38 @@ Now add YourFirstNestedControlPanel.xib and YourSecondNestedControlPanel.xib and
 <img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/OpenNestedPanel.png">
 Notice that closing outer panel will close all open nested panels automagically.
 
+### 6. Use context with nested panels
+
+Nested panels usually make sense in the context of same entity described by the parent panel. To demonstrate nested panels
+with context, let us add NestedDemoEntity to our data model.
+<img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/NestedDemoEntity.png">
+On this NestedDemoEntity we define one attribute `nestedDemoValue` of type `Double`.
+
+We also add an Object Controller object to YourControlPanel.xib, and bind its `content` to the
+File Owner's `objectController.content.nestedDemoEntity`.
+<img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/BindNestedDemoEntity.png">
+Finally we need to attach this new Object Controller object to the Demo Nested Control Panel Mediator's `objectController`
+outlet.
+<img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/AttachNestedObjectController.png">
+
+Pass NestedDemoEntity as a `context` argument of the `showPanel` method in KDemoNestedControlPanelMediator.m
+
+    @implementation KDemoNestedControlPanelMediator
+    - (IBAction)showYourFirstNestedControlPanel:(id)sender {
+      NestedDemoEntity *nestedEntity = self.objectController.content;
+      [self showPanel:sender nibName:@"YourFirstNestedControlPanel" context:nestedEntity];
+    }
+
+Add some controls to the panel in the YourFirstNestedControlPanel.xib, and bind slider's and text field's values to
+`nestedDemoValue` via `context`
+<img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/BindNestedDemoValue.png">
+Insert NestedDemoEntity into DemoEntity when creating entities
+
+    demoEntity = [NSEntityDescription insertNewObjectForEntityForName:@"DemoEntity"
+                                               inManagedObjectContext:self.managedObjectContext];
+    demoEntity.demoValue = [NSNumber numberWithDouble:12.345];
+    demoEntity.nestedDemoEntity = [NSEntityDescription insertNewObjectForEntityForName:@"NestedDemoEntity" inManagedObjectContext:self.managedObjectContext];
+    demoEntity.nestedDemoEntity.nestedDemoValue = [NSNumber numberWithDouble:54.321];
+and build and run the application. You should see the nested demo value in the first nested control panel.
+<img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/ShowNestedControlPanelWithContext.png">
+
