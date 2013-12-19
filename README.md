@@ -247,7 +247,7 @@ Notice that closing outer panel will close all open nested panels automagically.
 
 ### 6. Use context with nested panels
 
-Nested panels usually make sense in the context of same entity described by the parent panel. To demonstrate nested panels
+Nested panels usually make sense in the context of some entity described by the parent panel. To demonstrate nested panels
 with context, let us add NestedDemoEntity to our data model.
 <img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/NestedDemoEntity.png">
 On this NestedDemoEntity we define one attribute `nestedDemoValue` of type `Double`.
