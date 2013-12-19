@@ -7,6 +7,8 @@
 //
 
 #import "KDemoDocument.h"
+#import "DemoEntity.h"
+#import "NestedDemoEntity.h"
 
 @implementation KDemoDocument
 
@@ -26,15 +28,48 @@
   return @"KDemoDocument";
 }
 
+-(DemoEntity *)fetchOrCreateDemoEntity {
+  NSFetchRequest *request = [[NSFetchRequest alloc] init];
+  [request setEntity:[NSEntityDescription entityForName:@"DemoEntity" inManagedObjectContext:self.managedObjectContext]];
+  request.includesSubentities = YES;
+  NSError *error = nil;
+  NSArray *results = [self.managedObjectContext executeFetchRequest:request error:&error];
+  
+  DemoEntity *demoEntity;
+  if (results.count > 0) {
+    demoEntity = [results objectAtIndex:0];
+  } else {
+    demoEntity = [NSEntityDescription insertNewObjectForEntityForName:@"DemoEntity"
+                                               inManagedObjectContext:self.managedObjectContext];
+    demoEntity.demoValue = [NSNumber numberWithDouble:12.345];
+    demoEntity.nestedDemoEntity = [NSEntityDescription insertNewObjectForEntityForName:@"NestedDemoEntity" inManagedObjectContext:self.managedObjectContext];
+    demoEntity.nestedDemoEntity.nestedDemoValue = [NSNumber numberWithDouble:54.321];
+  }
+  return demoEntity;
+}
+
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController
 {
   [super windowControllerDidLoadNib:aController];
-  // Add any code here that needs to be executed once the windowController has loaded the document's window.
+  objectController.content = [self fetchOrCreateDemoEntity];
 }
 
 + (BOOL)autosavesInPlace
 {
     return YES;
+}
+
+- (id)managedObjectModel {
+  NSBundle *mainBundle = [NSBundle mainBundle];
+  NSString *mechModelPath = [mainBundle pathForResource:@"KDemoDocument" ofType:@"momd"];
+  NSURL *mechModelUrl = [NSURL fileURLWithPath:mechModelPath];
+  NSManagedObjectModel *mainModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:mechModelUrl];
+  
+  NSBundle *kControlPanelBundle = [NSBundle bundleWithIdentifier:@"com.khr.KControlPanels"];
+  NSString *path = [kControlPanelBundle pathForResource:@"KCameraUI" ofType:@"momd"];
+  NSURL *url = [NSURL fileURLWithPath:path];
+  NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:url];
+  return [NSManagedObjectModel modelByMergingModels:[NSArray arrayWithObjects: mainModel, model, nil]];
 }
 
 @end

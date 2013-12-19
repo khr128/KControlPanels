@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="untitled.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <elements/>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13A603" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="DemoEntity" representedClassName="DemoEntity" syncable="YES">
+        <attribute name="demoValue" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="nestedDemoEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NestedDemoEntity" syncable="YES"/>
+    </entity>
+    <entity name="NestedDemoEntity" representedClassName="NestedDemoEntity" syncable="YES">
+        <attribute name="nestedDemoValue" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DemoEntity" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="NestedDemoEntity" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
 </model>

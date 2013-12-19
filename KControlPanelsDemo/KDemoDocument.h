@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface KDemoDocument : NSPersistentDocument
+@interface KDemoDocument : NSPersistentDocument {
+  IBOutlet NSObjectController *objectController;
+}
 
 @end

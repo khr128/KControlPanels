@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE3BB91E1861177700B83157 /* KDemoNestedControlPanelMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3BB91D1861177700B83157 /* KDemoNestedControlPanelMediator.m */; };
+		AE3BB920186123CA00B83157 /* YourFirstNestedControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE3BB91F186123CA00B83157 /* YourFirstNestedControlPanel.xib */; };
+		AE3BB922186123E400B83157 /* YourSecondNestedControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE3BB921186123E400B83157 /* YourSecondNestedControlPanel.xib */; };
+		AE737D27185DED58008AF327 /* YourControlPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE737D26185DED58008AF327 /* YourControlPanel.xib */; };
+		AEDEBF4318626D4200B27095 /* NestedDemoEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDEBF4218626D4200B27095 /* NestedDemoEntity.m */; };
+		AEDEBF4618626D4300B27095 /* DemoEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = AEDEBF4518626D4300B27095 /* DemoEntity.m */; };
 		AEEF00E3185CA7300009D06E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEEF00E2185CA7300009D06E /* Cocoa.framework */; };
 		AEEF00ED185CA7300009D06E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEEF00EB185CA7300009D06E /* InfoPlist.strings */; };
 		AEEF00EF185CA7300009D06E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF00EE185CA7300009D06E /* main.m */; };
@@ -20,6 +26,8 @@
 		AEEF0109185CA7300009D06E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEEF00E2185CA7300009D06E /* Cocoa.framework */; };
 		AEEF0111185CA7300009D06E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AEEF010F185CA7300009D06E /* InfoPlist.strings */; };
 		AEEF0113185CA7300009D06E /* KControlPanelsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF0112185CA7300009D06E /* KControlPanelsDemoTests.m */; };
+		AEEF011D185CA8490009D06E /* KControlPanels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEEF011C185CA8480009D06E /* KControlPanels.framework */; };
+		AEEF0122185CA92C0009D06E /* KDemoControlPanelMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = AEEF0121185CA92C0009D06E /* KDemoControlPanelMediator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AE3BB91C1861177600B83157 /* KDemoNestedControlPanelMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDemoNestedControlPanelMediator.h; sourceTree = "<group>"; };
+		AE3BB91D1861177700B83157 /* KDemoNestedControlPanelMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDemoNestedControlPanelMediator.m; sourceTree = "<group>"; };
+		AE3BB91F186123CA00B83157 /* YourFirstNestedControlPanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YourFirstNestedControlPanel.xib; sourceTree = "<group>"; };
+		AE3BB921186123E400B83157 /* YourSecondNestedControlPanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YourSecondNestedControlPanel.xib; sourceTree = "<group>"; };
+		AE737D26185DED58008AF327 /* YourControlPanel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YourControlPanel.xib; sourceTree = "<group>"; };
+		AEDEBF4118626D4200B27095 /* NestedDemoEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NestedDemoEntity.h; sourceTree = "<group>"; };
+		AEDEBF4218626D4200B27095 /* NestedDemoEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NestedDemoEntity.m; sourceTree = "<group>"; };
+		AEDEBF4418626D4200B27095 /* DemoEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoEntity.h; sourceTree = "<group>"; };
+		AEDEBF4518626D4300B27095 /* DemoEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoEntity.m; sourceTree = "<group>"; };
 		AEEF00DF185CA7300009D06E /* KControlPanelsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KControlPanelsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEF00E2185CA7300009D06E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AEEF00E5185CA7300009D06E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -43,8 +60,8 @@
 		AEEF00EE185CA7300009D06E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AEEF00F0185CA7300009D06E /* KControlPanelsDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KControlPanelsDemo-Prefix.pch"; sourceTree = "<group>"; };
 		AEEF00F2185CA7300009D06E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		AEEF00F4185CA7300009D06E /* KDemoDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KDemoDocument.h; sourceTree = "<group>"; };
-		AEEF00F5185CA7300009D06E /* KDemoDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KDemoDocument.m; sourceTree = "<group>"; };
+		AEEF00F4185CA7300009D06E /* KDemoDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = KDemoDocument.h; path = KControlPanelsDemo/KDemoDocument.h; sourceTree = "<group>"; };
+		AEEF00F5185CA7300009D06E /* KDemoDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = KDemoDocument.m; path = KControlPanelsDemo/KDemoDocument.m; sourceTree = "<group>"; };
 		AEEF00F8185CA7300009D06E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/KDemoDocument.xib; sourceTree = "<group>"; };
 		AEEF00FB185CA7300009D06E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		AEEF00FE185CA7300009D06E /* KDemoDocument.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KDemoDocument.xcdatamodel; sourceTree = "<group>"; };
@@ -54,6 +71,9 @@
 		AEEF010E185CA7300009D06E /* KControlPanelsDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KControlPanelsDemoTests-Info.plist"; sourceTree = "<group>"; };
 		AEEF0110185CA7300009D06E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AEEF0112185CA7300009D06E /* KControlPanelsDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KControlPanelsDemoTests.m; sourceTree = "<group>"; };
+		AEEF011C185CA8480009D06E /* KControlPanels.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KControlPanels.framework; path = ../Frameworks/KControlPanels.framework; sourceTree = "<group>"; };
+		AEEF0120185CA92C0009D06E /* KDemoControlPanelMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KDemoControlPanelMediator.h; sourceTree = "<group>"; };
+		AEEF0121185CA92C0009D06E /* KDemoControlPanelMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KDemoControlPanelMediator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEEF011D185CA8490009D06E /* KControlPanels.framework in Frameworks */,
 				AEEF00E3185CA7300009D06E /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +98,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE737D2B1860964B008AF327 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF00FD185CA7300009D06E /* KDemoDocument.xcdatamodeld */,
+				AEDEBF4418626D4200B27095 /* DemoEntity.h */,
+				AEDEBF4518626D4300B27095 /* DemoEntity.m */,
+				AEDEBF4118626D4200B27095 /* NestedDemoEntity.h */,
+				AEDEBF4218626D4200B27095 /* NestedDemoEntity.m */,
+				AEEF00F4185CA7300009D06E /* KDemoDocument.h */,
+				AEEF00F5185CA7300009D06E /* KDemoDocument.m */,
+			);
+			name = "Core Data";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		AEEF00D6185CA7300009D06E = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +135,7 @@
 		AEEF00E1185CA7300009D06E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AEEF011C185CA8480009D06E /* KControlPanels.framework */,
 				AEEF00E2185CA7300009D06E /* Cocoa.framework */,
 				AEEF0107185CA7300009D06E /* XCTest.framework */,
 				AEEF00E4185CA7300009D06E /* Other Frameworks */,
@@ -119,12 +156,11 @@
 		AEEF00E8185CA7300009D06E /* KControlPanelsDemo */ = {
 			isa = PBXGroup;
 			children = (
-				AEEF00F4185CA7300009D06E /* KDemoDocument.h */,
-				AEEF00F5185CA7300009D06E /* KDemoDocument.m */,
+				AE737D2B1860964B008AF327 /* Core Data */,
+				AEEF011E185CA8690009D06E /* Control Panels */,
 				AEEF00F7185CA7300009D06E /* KDemoDocument.xib */,
 				AEEF00FA185CA7300009D06E /* MainMenu.xib */,
 				AEEF0100185CA7300009D06E /* Images.xcassets */,
-				AEEF00FD185CA7300009D06E /* KDemoDocument.xcdatamodeld */,
 				AEEF00E9185CA7300009D06E /* Supporting Files */,
 			);
 			path = KControlPanelsDemo;
@@ -158,6 +194,36 @@
 				AEEF010F185CA7300009D06E /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AEEF011E185CA8690009D06E /* Control Panels */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF0123185CAA560009D06E /* Xibs */,
+				AEEF011F185CA8950009D06E /* Mediators */,
+			);
+			name = "Control Panels";
+			sourceTree = "<group>";
+		};
+		AEEF011F185CA8950009D06E /* Mediators */ = {
+			isa = PBXGroup;
+			children = (
+				AEEF0120185CA92C0009D06E /* KDemoControlPanelMediator.h */,
+				AEEF0121185CA92C0009D06E /* KDemoControlPanelMediator.m */,
+				AE3BB91C1861177600B83157 /* KDemoNestedControlPanelMediator.h */,
+				AE3BB91D1861177700B83157 /* KDemoNestedControlPanelMediator.m */,
+			);
+			name = Mediators;
+			sourceTree = "<group>";
+		};
+		AEEF0123185CAA560009D06E /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				AE737D26185DED58008AF327 /* YourControlPanel.xib */,
+				AE3BB91F186123CA00B83157 /* YourFirstNestedControlPanel.xib */,
+				AE3BB921186123E400B83157 /* YourSecondNestedControlPanel.xib */,
+			);
+			name = Xibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,9 +303,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3BB922186123E400B83157 /* YourSecondNestedControlPanel.xib in Resources */,
 				AEEF00F9185CA7300009D06E /* KDemoDocument.xib in Resources */,
 				AEEF0101185CA7300009D06E /* Images.xcassets in Resources */,
+				AE3BB920186123CA00B83157 /* YourFirstNestedControlPanel.xib in Resources */,
 				AEEF00ED185CA7300009D06E /* InfoPlist.strings in Resources */,
+				AE737D27185DED58008AF327 /* YourControlPanel.xib in Resources */,
 				AEEF00F3185CA7300009D06E /* Credits.rtf in Resources */,
 				AEEF00FC185CA7300009D06E /* MainMenu.xib in Resources */,
 			);
@@ -260,6 +329,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEEF0122185CA92C0009D06E /* KDemoControlPanelMediator.m in Sources */,
+				AEDEBF4618626D4300B27095 /* DemoEntity.m in Sources */,
+				AE3BB91E1861177700B83157 /* KDemoNestedControlPanelMediator.m in Sources */,
+				AEDEBF4318626D4200B27095 /* NestedDemoEntity.m in Sources */,
 				AEEF00EF185CA7300009D06E /* main.m in Sources */,
 				AEEF00F6185CA7300009D06E /* KDemoDocument.m in Sources */,
 				AEEF00FF185CA7300009D06E /* KDemoDocument.xcdatamodeld in Sources */,
@@ -401,9 +474,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/khr/cocoa/Frameworks,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KControlPanelsDemo/KControlPanelsDemo-Prefix.pch";
 				INFOPLIST_FILE = "KControlPanelsDemo/KControlPanelsDemo-Info.plist";
+				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -414,9 +492,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/khr/cocoa/Frameworks,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KControlPanelsDemo/KControlPanelsDemo-Prefix.pch";
 				INFOPLIST_FILE = "KControlPanelsDemo/KControlPanelsDemo-Info.plist";
+				MOMC_NO_INVERSE_RELATIONSHIP_WARNINGS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -481,6 +564,7 @@
 				AEEF0118185CA7300009D06E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AEEF0119185CA7300009D06E /* Build configuration list for PBXNativeTarget "KControlPanelsDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +573,7 @@
 				AEEF011B185CA7300009D06E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -499,7 +584,8 @@
 				AEEF00FE185CA7300009D06E /* KDemoDocument.xcdatamodel */,
 			);
 			currentVersion = AEEF00FE185CA7300009D06E /* KDemoDocument.xcdatamodel */;
-			path = KDemoDocument.xcdatamodeld;
+			name = KDemoDocument.xcdatamodeld;
+			path = KControlPanelsDemo/KDemoDocument.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
