@@ -1,5 +1,14 @@
 # KControlPanels
 
+## How to install
+
+From the project directory run the following commands in terminal
+
+    xcodebuild clean install
+    pkgbuild --root build/Release/KControlPanels.framework --install-location <your-dir> ./KControlPanels.pkg
+    open ./KControlPanels.pkg
+and follow the standard installer routine.
+
 ## How to add your own control panel
 
 ### 1. Add a mediator class
