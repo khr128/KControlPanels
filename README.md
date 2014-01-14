@@ -55,7 +55,7 @@ object.
 <img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/MediatorConnections.png">
 
 Add new empty XIB file YourControlPanel.xib and set its file owner class to KControlPanelsWindowController.
-<img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/ControlPanelControlle.png">
+<img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/ControlPanelController.png">
 
 Add NSPanel to it. Set class of the panel to KControlKeyPanel. Remove titlebar and make it a regular panel.
 <img src="https://raw.github.com/khr128/KControlPanels/gh-pages/README.assets/PanelClass.png">
