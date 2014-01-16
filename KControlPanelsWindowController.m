@@ -9,6 +9,7 @@
 #import "KControlPanelsWindowController.h"
 #import "NSView+TopmostView.h"
 #import <QuartzCore/QuartzCore.h>
+#import <QuartzCore/CAMediaTimingFunction.h>
 
 @interface KControlPanelsWindowController ()
 
@@ -25,6 +26,8 @@
 -(CABasicAnimation *)frameAnimation {
   CABasicAnimation *a = [CABasicAnimation animation];
   a.delegate = self;
+  a.timingFunction = [[CAMediaTimingFunction alloc] initWithControlPoints:0.5 :1.0 :0.5 :0.9];
+  a.duration = 0.5;
   return a;
 }
 
