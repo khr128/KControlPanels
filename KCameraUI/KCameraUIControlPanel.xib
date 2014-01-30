@@ -38,7 +38,7 @@
                                     <font key="font" metaFont="system"/>
                                     <tabViewItems>
                                         <tabViewItem label="Location" identifier="1" id="5hP-pI-So0">
-                                            <view key="view" ambiguous="YES" id="Rf8-oj-kr7">
+                                            <view key="view" id="Rf8-oj-kr7">
                                                 <rect key="frame" x="10" y="33" width="309" height="137"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
@@ -286,7 +286,7 @@
                                             </view>
                                         </tabViewItem>
                                         <tabViewItem label="Look At" identifier="2" id="3zi-Ux-1ya">
-                                            <view key="view" id="bQh-f3-fbq">
+                                            <view key="view" ambiguous="YES" id="bQh-f3-fbq">
                                                 <rect key="frame" x="10" y="33" width="309" height="137"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
@@ -302,7 +302,7 @@
                                                     <slider horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iut-BB-E6M">
                                                         <rect key="frame" x="61" y="104" width="32" height="32"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <sliderCell key="cell" continuous="YES" alignment="left" minValue="-45" maxValue="45" tickMarkPosition="above" numberOfTickMarks="10" sliderType="circular" id="npd-kW-NAM"/>
+                                                        <sliderCell key="cell" continuous="YES" alignment="left" minValue="-1000" maxValue="1000" tickMarkPosition="above" numberOfTickMarks="10" sliderType="circular" id="npd-kW-NAM"/>
                                                         <connections>
                                                             <binding destination="TSA-WM-jhd" name="value" keyPath="yaw" id="Inr-x2-wfw">
                                                                 <dictionary key="options">
@@ -323,7 +323,7 @@
                                                     <slider horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gTO-f5-u32">
                                                         <rect key="frame" x="160" y="104" width="32" height="32"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <sliderCell key="cell" continuous="YES" alignment="left" minValue="-45" maxValue="45" doubleValue="-5" tickMarkPosition="above" numberOfTickMarks="10" sliderType="circular" id="pZ8-rR-bsn"/>
+                                                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="-1000" maxValue="1000" tickMarkPosition="above" numberOfTickMarks="10" sliderType="circular" id="pZ8-rR-bsn"/>
                                                         <connections>
                                                             <binding destination="TSA-WM-jhd" name="value" keyPath="pitch" id="XhT-VY-mas">
                                                                 <dictionary key="options">
@@ -344,7 +344,7 @@
                                                     <slider horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HdN-HE-WGs">
                                                         <rect key="frame" x="260" y="104" width="32" height="32"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                        <sliderCell key="cell" continuous="YES" alignment="left" minValue="-180" maxValue="180" doubleValue="-20" tickMarkPosition="above" numberOfTickMarks="10" sliderType="circular" id="qGv-mJ-8cn"/>
+                                                        <sliderCell key="cell" continuous="YES" alignment="left" minValue="-180" maxValue="180" tickMarkPosition="above" numberOfTickMarks="10" sliderType="circular" id="qGv-mJ-8cn"/>
                                                         <connections>
                                                             <binding destination="TSA-WM-jhd" name="value" keyPath="roll" id="n4G-5I-ZMK">
                                                                 <dictionary key="options">

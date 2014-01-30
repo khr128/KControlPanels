@@ -92,8 +92,10 @@
   GLKVector3 c = GLKVector3Subtract(b, GLKVector3MultiplyScalar(a, ab));
   c = GLKVector3DivideScalar(c, sqrtf(1.0-ab*ab)/self.distanceFromCenter);
   
-  _pitch = pitch;
-  float th = [pitch floatValue];
+  float th = [pitch floatValue] - [prevPitch floatValue];
+  prevPitch = pitch;
+  _pitch = _distanceFromCenter > 1.0 ? [NSNumber numberWithFloat:th/_distanceFromCenter] : [NSNumber numberWithFloat:th];
+  th = [_pitch floatValue];
   GLKVector3 newDirection = GLKVector3Subtract(GLKVector3MultiplyScalar(currentDirection, cosf(th)), GLKVector3MultiplyScalar(c, sinf(th)));
   self.center = GLKVector3Add(newDirection, self.location);
   
@@ -104,6 +106,7 @@
   [self updateSphericalCoordinates];
   [self willChangeValueForKey:@"pitch"];
   _pitch = [NSNumber numberWithFloat:0];
+  prevPitch = [NSNumber numberWithFloat:0];
   [self didChangeValueForKey:@"pitch"];
 }
 
@@ -119,8 +122,11 @@
   
   GLKVector3 w = GLKVector3CrossProduct(c, currentDirection);
   
-  _yaw = yaw;
-  float th = [yaw floatValue];
+  float th = [yaw floatValue] - [prevYaw floatValue];
+  prevYaw = yaw;
+
+  _yaw = _distanceFromCenter > 1.0 ? [NSNumber numberWithFloat:th/_distanceFromCenter] : [NSNumber numberWithFloat:th];
+  th = [_yaw floatValue];
   GLKVector3 newDirection = GLKVector3Subtract(GLKVector3MultiplyScalar(currentDirection, cosf(th)), GLKVector3MultiplyScalar(w, sinf(th)));
   
   self.center = GLKVector3Add(newDirection, self.location);
@@ -132,6 +138,7 @@
   [self updateSphericalCoordinates];
   [self willChangeValueForKey:@"yaw"];
   _yaw = [NSNumber numberWithFloat:0];
+  prevYaw = [NSNumber numberWithFloat:0];
   [self didChangeValueForKey:@"yaw"];
 }
 
@@ -140,14 +147,17 @@
   [self updateSphericalCoordinates];
   [self willChangeValueForKey:@"roll"];
   _roll = [NSNumber numberWithFloat:0];
+  prevRoll = [NSNumber numberWithFloat:0];
   [self didChangeValueForKey:@"roll"];
 }
 
 - (void)setRoll:(NSNumber *)roll {
   [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(resetRoll:) object:nil];
   _roll = roll;
-  float costh = cosf([roll floatValue]);
-  float sinth = sinf([roll floatValue]);
+  float th = [roll floatValue] - [prevRoll floatValue];
+  prevRoll = roll;
+  float costh = cosf(th);
+  float sinth = -sinf(th);
   
   GLKVector3 n = GLKVector3Normalize(currentDirection);
   

@@ -13,5 +13,6 @@
   GLKVector3 u, r, t;
   GLKVector3 currentDirection;
   GLKVector3 currentUp;
+  NSNumber *prevPitch, *prevYaw, *prevRoll;
 }
 @end
